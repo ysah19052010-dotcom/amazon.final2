@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #172b40;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* CABEÇALHO AZUL */
+.cabecalho {
+    background-color: #172b40;
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    color: white;
+    font-size: 28px;
+}
+
+.cabecalho nav {
+    display: flex;
+    gap: 25px;
+}
+
+.cabecalho nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.cabecalho nav a:hover {
+    color: #ff9900;
+}
+
+/* CONTEÚDO PRINCIPAL */
+main {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 55px 25px;
+    flex: 1;
+}
+
+/* TÍTULO */
+.principal {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.principal h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: #172b40;
+}
+
+.principal h1 span {
+    color: #f39800;
+}
+
+.principal p {
+    color: #687586;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* CARTÕES */
+.contatos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.card {
+    background-color: white;
+    padding: 30px 22px;
+    text-align: center;
+    border-radius: 12px;
+    border: 1px solid #e8e8e8;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.icone {
+    width: 55px;
+    height: 55px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+.azul {
+    background-color: #e4efff;
+}
+
+.roxo {
+    background-color: #f0e4ff;
+}
+
+.laranja {
+    background-color: #ffebdf;
+}
+
+.card h3 {
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+.card p {
+    color: #687586;
+    font-size: 14px;
+    line-height: 1.6;
+    min-height: 45px;
+    margin-bottom: 20px;
+}
+
+/* BOTÕES E LINKS DOS CARTÕES */
+.card button,
+.card a {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 7px;
+    background-color: #ff9900;
+    color: #172b40;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.card a:hover,
+.card button:hover {
+    background-color: #f5ad35;
+}
+
+/* AVISO */
+.aviso {
+    background-color: white;
+    border: 1px solid #e8e8e8;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.aviso p {
+    color: #526174;
+    font-size: 14px;
+}
+
+/* RODAPÉ AZUL */
+.rodape {
+    background-color: #172b40;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+    width: 100%;
+    margin-top: auto;
+}
+
+.rodape p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* ADAPTAÇÃO PARA CELULARES */
+@media (max-width: 750px) {
+    .cabecalho {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .cabecalho nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .contatos {
+        grid-template-columns: 1fr;
+    }
+
+    .principal h1 {
+        font-size: 28px;
+    }
+
+    main {
+        padding: 40px 20px;
+    }
+}
